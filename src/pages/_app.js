@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
 import GlobalStyles from '@mui/material/GlobalStyles';
 import Nav from '../components/Nav'
@@ -13,6 +13,14 @@ function MyApp({ Component, pageProps }) {
   const [userId, setUserId] = useState()
   const [sessionId, setSessionId] = useState()
 
+  useEffect(() => {
+    const sessionInLocal = localStorage.getItem('session_id');
+    setSessionId(sessionInLocal)
+    const usernameInLocal = localStorage.getItem('username');
+    setUser(usernameInLocal)
+    const userIdInLocal = localStorage.getItem('userid');
+    setUserId(userIdInLocal)
+  }, [])
 
   return (
     <>

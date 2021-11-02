@@ -32,6 +32,7 @@ export default function Approved() {
         .then(res => res.json())
         .then(data => {
           if (data.success) {
+            localStorage.setItem('session_id', data.session_id);
             setSessionId(data.session_id)
             return data.session_id
           }
@@ -46,6 +47,9 @@ export default function Approved() {
       .then(res => res.json())
       .then(data => {
         if (data) {
+          setUser(data.username)
+          localStorage.setItem('username', data.username);
+          localStorage.setItem('userid', data.id);
           return data
         }
       })

@@ -45,7 +45,7 @@ export default function Hero() {
         <Image
           alt='moviedb logo'
           src='/blue_long_logo.svg'
-          height='150'
+          height='205'
           width='250'
         />
       </Box>

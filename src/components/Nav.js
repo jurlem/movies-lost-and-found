@@ -7,7 +7,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Stack from '@mui/material/Stack';
 import Link from '@mui/material/Link';
 
-import { createToken } from '../utils/useAuth'
+import { createToken, logout } from '../utils/useAuth'
 import UserContext from '../context/userContext';
 
 
@@ -20,6 +20,7 @@ const Nav = () => {
   }
 
   const handleLogout = async () => {
+    await logout()
     setUser(null)
     router.push('/')
   }

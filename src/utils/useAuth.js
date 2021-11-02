@@ -13,4 +13,9 @@ export function createToken() {
     })
 }
 
+export function logout() {
+  localStorage.removeItem('session_id');
+  localStorage.removeItem('username');
+  localStorage.removeItem('userid');
+}
 

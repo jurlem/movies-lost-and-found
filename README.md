@@ -15,4 +15,5 @@ To learn more about Next.js, take a look at the following resources:
 Movies Lost and Found is an application where MovieDB users can search movies, add them to the watchlist and to mark as favorites. 
 
 ## Deployed on Vercel
-Site is live on address:  movies-lost-and-found.vercel.app
+Site is live on address: [Movies Lost and Found](https://movies-lost-and-found.vercel.app) 
+
